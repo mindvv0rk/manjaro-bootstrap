@@ -1,21 +1,17 @@
 ### Basic ###
-*       bash-completion
+*       bash-completion 
 *       xkb-switch-git              aur
 *       zsh
 *       zsh-completions
 *       feh
 *       vim
-*       xclip
-*       tmux
-*       urxvt-autocomplete-all-the-things-git    aur
-*       xdotool
+*       xclip 
+*       tmux #screen analog
 *       jq
 *       cdiff                       aur
 *       icdiff                      aur
-*       brandr
 
 # Utils
-*       siege
 *       keybase-bin                 aur
 
 # i3 specific packages
@@ -26,30 +22,9 @@
 *       atom-editor-bin             aur
 *       shellcheck
 
-# docker
-*       docker
-*       docker-machine
-
-# go
-*       go
-*       go-tools
-
-# php
-job     php
-job     composer
-
-# rust
-desktop rust
-desktop cargo
 
 ### Web ###
-*       google-chrome               aur
 *       firefox
-job     vivaldi                     aur
-job     vivaldi-ffmpeg-codecs       aur
-!vm     dropbox
-!vm     dropbox-cli                 aur
-
 
 ### Screenshot and gif tools ##
 *       maim
@@ -58,17 +33,13 @@ job     vivaldi-ffmpeg-codecs       aur
 *       ffcast                      aur
 
 ### Communication ###
-job     thunderbird
-job     psi
-job     psi-i18n
-job     telegram-desktop-bin        aur
-desktop telegram-desktop-bin        aur
-#job     skype
-job     slack-desktop               aur
-desktop slack-desktop               aur
+*	telegram-desktop-bin        aur
+#job    
+*	skype
+*	slack-desktop               aur
 
 # GTK
-gnome-themes-standard
+#gnome-themes-standard
 arc-themes
 
 vertex-maia-icon-theme
