@@ -1,11 +1,11 @@
 ### Basic ###
-*       bash-completion 
+*       bash-completion
 *       xkb-switch-git              aur
 *       zsh
 *       zsh-completions
 *       feh
 *       vim
-*       xclip 
+*       xclip
 *       tmux #screen analog
 *       jq
 *       cdiff                       aur
@@ -33,21 +33,20 @@
 *       ffcast                      aur
 
 ### Communication ###
-*	telegram-desktop-bin        aur
-#job    
-*	skype
-*	slack-desktop               aur
+*	      telegram-desktop-bin        aur
+*	      skype
+*	      slack-desktop               aur
 
 # GTK
-#gnome-themes-standard
+#gnome-themes-standard #try without it
 arc-themes
 
 vertex-maia-icon-theme
 xcursor-maia
 
 # LightDM
-!vm lightdm-webkit2-greeter              aur
-!vm lightdm-webkit-theme-material-git    aur
+* lightdm-webkit2-greeter              aur
+* lightdm-webkit-theme-material-git    aur
 
 ### Fonts ###
 *       xorg-xlsfonts
