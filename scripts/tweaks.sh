@@ -53,35 +53,13 @@ tweaks::setup_lightdm_theme() {
 
     if [ ! -f "/var/lib/AccountsService/icons/${USER}" ] ; then
         cd /tmp
-        wget -q https://avatars0.githubusercontent.com/u/4853075 -O avatar.jpg
+        wget -q https://avatars0.githubusercontent.com/u/8033184 -O avatar.jpg
         sudo mv avatar.jpg /var/lib/AccountsService/icons/${USER}
     fi
 
-    if ! grep -q "Icon=" /var/lib/AccountsService/users/hypnoglow ; then
-        echo "Icon=/var/lib/AccountsService/icons/${USER}" | sudo tee -a /var/lib/AccountsService/users/hypnoglow 1>/dev/null
+    if ! grep -q "Icon=" /var/lib/AccountsService/users/${USER} ; then
+        echo "Icon=/var/lib/AccountsService/icons/${USER}" | sudo tee -a /var/lib/AccountsService/users/${USER} 1>/dev/null
     fi
-}
-
-tweaks::setup_docker() {
-    if ! groups ${USER} | grep -q docker ; then
-        sudo gpasswd --add ${USER} docker
-    fi
-
-    if [ "${arg_profile}" != "job" ] ; then
-        return 0
-    fi
-
-    if [ -f "/etc/systemd/system/docker.service.d/ngs.conf" ] ; then
-        return 0
-    fi
-
-    std::info "Setup docker"
-    sudo mkdir -p /etc/systemd/system/docker.service.d/
-    sudo cp ${self_dir}/sources/etc/systemd/system/docker.service.d/ngs.conf \
-            /etc/systemd/system/docker.service.d/ngs.conf
-
-    sudo systemctl daemon-reload
-    sudo systemctl restart docker
 }
 
 tweaks::disable_servises() {
@@ -100,17 +78,5 @@ tweaks::disable_servises() {
         fi
     done
 
-
-}
-
-tweaks::resolv() {
-    if grep -q "cname.s in.ngs.ru" /etc/resolv.conf; then
-        return 0
-    fi
-
-    # https://www.freebsd.org/cgi/man.cgi?query=resolvconf.conf
-    std::info "Add NGS domains to resolv.conf"
-    echo -e "#NGS\nsearch_domains=\"cname.s in.ngs.ru\"" | sudo tee -a /etc/resolvconf.conf 1>/dev/null
-    sudo resolvconf -u
 
 }
