@@ -25,11 +25,6 @@ tweaks::switch_to_zsh() {
     fi
 }
 
-tweaks::gtk_themes() {
-    ln -sfnv /usr/share/themes/Palemoon/Vertex-Maia-Dark/chrome "$(find "${HOME}/.moonchild productions/pale moon/" -type d -name *.default)/chrome"
-    ln -sfnv /usr/share/themes/Firefox/Vertex-Maia-Dark/chrome "$(find "${HOME}/.mozilla/firefox/" -type d -name *.default)/chrome"
-}
-
 tweaks::setup_lightdm_theme() {
     if ! pacman -Qs lightdm-webkit-theme-material-git &>/dev/null ; then
         std::warning "Package 'lightdm-webkit-theme-material-git' not found: cannot apply lightdm theme tweaks"
