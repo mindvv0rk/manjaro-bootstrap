@@ -188,8 +188,6 @@ main() {
 
     mkdir -p "${HOME}/apps/bin"
     apps::nodejs-n
-    apps::realsync
-    #apps::php56
 
     # Make some dirs
     mkdir -p "${HOME}/Screenshots"
