@@ -10,9 +10,16 @@
 *       jq
 *       cdiff                       aur
 *       icdiff                      aur
+*	jdk			aur
+
+#Android
+*	android-studio		aur
+*	gradle				
 
 # Utils
 *       keybase-bin                 aur
+*	xflux			aur
+*	toggldesktop		aur
 
 # i3 specific packages
 *       i3blocks                    aur
@@ -21,7 +28,6 @@
 ### Development ###
 *       atom-editor-bin             aur
 *       shellcheck
-
 
 ### Web ###
 *       firefox
