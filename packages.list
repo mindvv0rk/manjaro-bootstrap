@@ -11,7 +11,9 @@
 *       cdiff                       aur
 *       icdiff                      aur
 *	jdk			aur
-
+*	go			
+*	go-tools
+*	dotbro			aur
 #Android
 *	android-studio		aur
 *	gradle				
@@ -40,7 +42,7 @@
 
 ### Communication ###
 *	      telegram-desktop-bin        aur
-*	      skype
+*	      skype			aur
 *	      slack-desktop               aur
 
 # GTK
