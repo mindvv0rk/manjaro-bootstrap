@@ -16,4 +16,13 @@ apps::nodejs-n() {
     git clone https://github.com/tj/n ${HOME}/sources/tj/n
     cd ${HOME}/sources/tj/n
     PREFIX=${HOME}/apps/n make install
+    
+     # Install latest node and npm packages
+    std::info "Install latest Node.js and global npm packages"
+    export N_PREFIX="${HOME}/apps/n"
+    export PATH="$PATH:$N_PREFIX/bin"
+    n latest
+    npm install -g \
+        karma-cli \
+	nodemon
 }
