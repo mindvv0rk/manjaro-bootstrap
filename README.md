@@ -7,7 +7,7 @@ e.g. after a fresh installation.
 
 Clone this repo:
 
-    git clone https://github.com/hypnoglow/manjaro-bootstrap.git
+    git clone https://github.com/mindvv0rk/manjaro-bootstrap.git
 
 Run:
 
