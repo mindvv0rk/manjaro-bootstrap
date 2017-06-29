@@ -187,7 +187,7 @@ main() {
     # Install additional software (not from arch repos)
 
     mkdir -p "${HOME}/apps/bin"
-    apps::nodejs-n
+#    apps::nodejs-n
 
     # Make some dirs
     mkdir -p "${HOME}/Screenshots"

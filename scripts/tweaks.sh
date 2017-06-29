@@ -51,15 +51,15 @@ tweaks::setup_lightdm_theme() {
         return 0
     fi
 
-    if grep -Fxq "greeter-session=lightdm-gtk-greeter" /etc/lightdm/lightdm.conf; then
-        std::info "Tweak LightDM greeter"
-        cat /etc/lightdm/lightdm.conf | sed s/"greeter-session=lightdm-gtk-greeter"/"greeter-session=lightdm-webkit2-greeter"/ | sudo tee /etc/lightdm/lightdm.conf > /dev/null
-    fi
+#    if grep -Fxq "greeter-session=lightdm-gtk-greeter" /etc/lightdm/lightdm.conf; then
+#        std::info "Tweak LightDM greeter"
+#        cat /etc/lightdm/lightdm.conf | sed s/"greeter-session=lightdm-gtk-greeter"/"greeter-session=lightdm-webkit2-greeter"/ | sudo tee /etc/lightdm/lightdm.conf > /dev/null
+#    fi
 
-    if grep -Fxq "#greeter-session=example-gtk-gnome" /etc/lightdm/lightdm.conf; then
-        std::info "Tweak LightDM greeter"
-        cat /etc/lightdm/lightdm.conf | sed s/"#greeter-session=example-gtk-gnome"/"greeter-session=lightdm-webkit2-greeter"/ | sudo tee /etc/lightdm/lightdm.conf > /dev/null
-    fi
+#    if grep -Fxq "#greeter-session=example-gtk-gnome" /etc/lightdm/lightdm.conf; then
+#        std::info "Tweak LightDM greeter"
+#        cat /etc/lightdm/lightdm.conf | sed s/"#greeter-session=example-gtk-gnome"/"greeter-session=lightdm-webkit2-greeter"/ | sudo tee /etc/lightdm/lightdm.conf > /dev/null
+#    fi
 
     if grep -Fxq "webkit-theme = antergos" /etc/lightdm/lightdm-webkit2-greeter.conf; then
         std::info "Set webkit theme \"material\" for lightdm-webkit2-greeter"
